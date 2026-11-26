@@ -1,0 +1,22 @@
+description = "See how full your drives are and what's using the space: Docker, Rust builds, AI models, node_modules and caches, each with its path"
+version = "1.0.0"
+command = "python3 main.py"
+# panes: to open its tab, draw it and mark it when a drive is nearly full.
+permissions = ["panes"]
+
+[settings.project-folders]
+type = "list"
+default = ["~"]
+description = "Folders to look in for Rust target and node_modules folders"
+
+[settings.warn-percent]
+type = "integer"
+default = 90
+min = 50
+max = 99
+description = "How full a drive is, in percent, before it's shown in red and you're told"
+
+[settings.notify]
+type = "boolean"
+default = true
+description = "Send a notification when a drive passes warn-percent"
